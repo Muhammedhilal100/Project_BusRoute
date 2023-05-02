@@ -1,0 +1,90 @@
+*{
+margin: 0;
+  padding: 0;
+}
+body{
+    background-image: url('cc.jfif');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .simple_form{
+    text-align: center;
+    margin-left:800px;
+    width: 35%;
+    color: #000;
+    background: rgba(247, 243, 243, 0.452);
+    border:2px solid rgb(14, 13, 13);
+    padding: 5px;
+  }
+  #registration{
+    width: 100%;
+    background-color: #051019;
+    opacity: 0.6;
+    padding: 55px 0px;
+  }
+  #button{
+    width: 55%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid rgb(236, 234, 234);
+    outline: 0;
+    font-family: serif;
+    font-size: 15px;
+    color: #000;
+    background:#fcfcfc;
+  }
+  h1{
+   padding: 3px;
+  }
+  h2{
+    padding: 1px;
+   }
+  #number{
+    width: 44%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid white;
+    outline: 0;
+    font-family: serif;
+    font-size: 15px;
+    color: white;
+    background: none;
+  }
+  
+  #num{
+    width: 11%;
+    padding: 6px 0px;
+    border-radius: 5px;
+    border: 1px solid white;
+    outline: 0;
+    background: none;
+  }  
+  #check{
+      font-family: serif;
+      font-size: 18px;
+  }
+  #sub{
+    text-align: center;
+      width: 150px;
+      padding: 5px;
+      font-family: serif;
+      font-size: 18px;
+      border: 1px solid white;
+      outline: 0;
+      border-radius: 5px;
+      background:#1d6ce2;
+      color: white;
+  }
+  #sub:hover{
+      background:#035a03 ;
+  }
+  td{
+
+    color: rgb(0, 0, 0);
+  }
+  th{
+    color: #ffc400;
+  }
+  table{
+    border-color:#000 ;
+  }

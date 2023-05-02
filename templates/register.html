@@ -1,0 +1,118 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Awesome Register Form a Flat Responsive Widget Template :: w3layouts</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Awesome Register Form template Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login sign up Responsive web template, SmartPhone Compatible web template, free web designs for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Custom Theme files -->
+<link href="static/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!-- //Custom Theme files -->
+<!-- web font --> 
+<link href="//fonts.googleapis.com/css?family=Poiret+One&amp;subset=cyrillic,latin-ext" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Josefin+Sans:100,100i,300,300i,400,400i,600,600i,700,700i&amp;subset=latin-ext" rel="stylesheet">
+<!-- //web font -->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+
+$(document).ready(function(){
+
+    $("#email").keyup(function() {
+
+        if ($(this).val() != 'default') {
+
+            var br = $('#email').val();
+
+
+
+            $.ajax({
+                type: 'POST',
+                url: "/checkemail1",
+                data: { em: br },
+
+                success: function(response) {
+                response=response.replace('"',"").replace('"',"")
+                document.getElementById("e").innerHTML=response
+
+
+
+                }
+            });
+        }
+
+    });
+       $("#username").keyup(function() {
+
+        if ($(this).val() != 'default') {
+
+            var br = $('#username').val();
+
+
+
+            $.ajax({
+                type: 'POST',
+                url: "/checkusername",
+                data: { un: br },
+
+                success: function(response) {
+                response=response.replace('"',"").replace('"',"")
+                document.getElementById("u").innerHTML=response
+
+
+
+                }
+            });
+        }
+
+    });
+    </script>
+</head>
+<body>
+	<!-- main -->
+	<div data-vide-bg="video/awesome">
+	<div class="main-w3layouts center-container">
+		<h1>Register Form</h1>
+		<div class="main-agileinfo">
+			<div class="agileits-top">
+				<form action="/register_post" enctype="multipart/form-data" method="post">
+					<i class="fa fa-user-o" aria-hidden="true"></i>
+					<input class="text" type="text" name="name" placeholder="Name" required pattern="[A-Z a-z.]{3,25}" ><br><br>
+					<input class="text" type="text" name="Phonenumber" placeholder="Phone Number" required pattern="[6789][0-9]{9}"/>
+					<div><input class="text email" type="email" name="email" placeholder="Email" id="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}"><div id="e"></div></div>
+					<input class="text" type="text" name="Owner" placeholder="Owner ID Number" required=""><br><br>
+					<div><input class="text" type="text" name="user" placeholder="Username" id="username" required><div id="u"></div></div><br><br>
+					<input class="text" type="password" name="password" placeholder="Password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+					<input class="text w3lpass" type="password" name="password1" placeholder="Confirm Password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+					<div class="wthree-text">  
+<!--						<label class="anim">-->
+<!--							<input type="checkbox" class="checkbox" required="">-->
+<!--							<span>I Agree To The Terms & Conditions</span> -->
+<!--						</label>  -->
+						<div class="clear"> </div>
+					</div>   
+					<input type="submit" value="REGISTER">
+				</form>
+			</div>	 
+		</div>	
+		<!-- copyright -->
+		<div class="w3copyright-agile">
+
+		</div>
+		<!-- //copyright -->	
+	</div>	
+	</div>	
+	<!-- //main --> 
+	<!-- js -->
+<script type="static/text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script src="static/js/jquery.vide.min.js"></script>
+<!-- //js -->
+
+</body>
+</html>

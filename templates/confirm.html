@@ -1,0 +1,184 @@
+<html>
+<head>
+    <style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+</style>
+
+
+<style>.bn31 {
+  background-image: linear-gradient(to right, #006175 0%, #00a950 100%);
+  border-radius: 40px;
+  box-sizing: border-box;
+  color: #00a84f;
+  display: block;
+  height: 30px;
+  font-size: 1em;
+  padding: 4px;
+  position: relative;
+  text-decoration: none;
+  width: 7em;
+  z-index: 2;
+}
+
+.bn31:hover {
+  color: #fff;
+}
+
+.bn31 .bn31span {
+  align-items: center;
+  background: #0e0e10;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  transition: background 0.5s ease;
+  width: 100%;
+}
+
+.bn31:hover .bn31span {
+  background: transparent;
+}</style>
+    <style>
+    body {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+background-image:url(static/images/1.jpeg);
+background-size: 100%;
+}
+
+.container {
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+table {
+	width: 800px;
+	border-collapse: collapse;
+	overflow: hidden;
+	box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+th,
+td {
+	padding: 15px;
+	background-color: rgba(255,255,255,0.2);
+	color: black;
+}
+
+th {
+	text-align: left;
+	color: black;
+	background: rgb(176,196,222);
+
+}
+
+thead {
+	th {
+		background-color: #55608f;
+	}
+}
+
+tbody {
+	tr {
+		&:hover {
+			background-color: rgba(255,255,255,0.3);
+		}
+	}
+	td {
+		position: relative;
+		&:hover {
+			&:before {
+				content: "";
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: -9999px;
+				bottom: -9999px;
+				background-color: rgba(255,255,255,0.2);
+				z-index: -1;
+			}
+		}
+	}
+}</style>
+    <ul>
+
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="/admin_view_approved_owners">View Approved Owners</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="/admin_view_rejected_owners">View Rejected Owners</a>
+                        </li>
+
+                         <li class="nav-item">
+                             <a class="nav-link btn-outline-primary rounded-pill px-3" href="/">Logout</a>
+                        </li>
+</ul>
+
+
+</head>
+<body>
+<form id="form1" name="form1" method="post" action="/confirm_post">
+ <div class="container">
+	<table>
+      <thead>
+    <tr>
+      <th>s/no.</th>
+      <th>name</th>
+      <th>phone</th>
+      <th>email</th>
+        <th>owner</th>
+        <th>username</th>
+        <th>password</th>
+        <th>Confirm password</th>
+        <th></th>
+    </tr></thead>
+
+               {% for i in r %}
+<tbody>
+    <tr>
+      <td>{{ loop.index }}&nbsp;</td>
+    <td>{{ i['name'] }}</td>
+    <td>{{ i['phone'] }}</td>
+   <td>{{ i['email'] }}</td>
+    <td>{{ i['owner'] }}</td>
+     <td>{{ i['username'] }}</td>
+     <td>{{ i['password'] }}</td>
+     <td>{{ i['password1'] }}</td>
+        <td><a class="bn31" href="/view_register/{{ i['username'] }}"><span class="bn31span">MORE</span></a></td>
+    </tr>
+
+    {% endfor %}
+	</tbody>
+	</table>
+</div>
+
+</form>
+</body>
+</html>
